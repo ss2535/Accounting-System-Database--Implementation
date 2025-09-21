@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>افزودن کالا</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">افزودن کالا</h2>
+    <form th:action="@{/products/add}" th:object="${product}" method="post">
+
+        <div class="form-group">
+            <label for="name">نام کالا:</label>
+            <input type="text" class="form-control" id="name" th:field="*{name}" required>
+        </div>
+
+
+        <div class="form-group">
+            <label for="productCode">کد محصول:</label>
+            <input type="text" class="form-control" id="productCode" th:field="*{productCode}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="stockBarcode">بارکد انبار:</label>
+            <input type="text" class="form-control" id="stockBarcode" th:field="*{stockBarcode}">
+        </div>
+
+        <div class="form-group">
+            <label for="description">توضیحات:</label>
+            <textarea class="form-control" id="description" th:field="*{description}"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="productType">نوع کالا:</label>
+            <select class="form-control" id="productType" th:field="*{productType.id}" required>
+                <option value="">انتخاب کنید</option>
+                <option value="1">دسته‌بندی اول</option>
+                <option value="2">دسته‌بندی دوم</option>
+                <option value="3">دسته‌بندی سوم</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="accountHeadingDetail">سرفصل تفصیل:</label>
+            <select class="form-control" id="accountHeadingDetail" th:field="*{accountHeadingDetail.id}" required>
+                <option value="">انتخاب کنید</option>
+                <option value="1">سرفصل یک</option>
+                <option value="2">سرفصل دو</option>
+                <option value="3">سرفصل سه</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">افزودن کالا</button>
+    </form>
+</div>
+
+</body>
+</html>

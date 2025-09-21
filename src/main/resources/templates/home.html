@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>حسابداری مالی</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+        background-color: #f4f7fa;
+        font-family: 'Arial', sans-serif;
+    }
+    .hero {
+        background-color: #007bff;
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1.3rem;
+    }
+    .btn-custom {
+        background-color: #ff7f50; /* رنگ نارنجی */
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+        margin: 10px;
+    }
+    .btn-custom:hover {
+        background-color: #ff4500; /* رنگ تیره‌تر برای حالت هاور */
+        transform: scale(1.05);
+    }
+    .container {
+        margin-top: 30px;
+    }
+    .card {
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>خوش آمدید به سیستم حسابداری مالی</h1>
+  <p>لطفاً از منو برای دسترسی به بخش‌های مختلف استفاده کنید</p>
+</div>
+
+<div class="container">
+  <h2 class="text-center mt-4">مدیریت سرفصل‌ها</h2>
+  <div class="row text-center">
+    <div class="col">
+      <a href="/account-heading-form" class="btn btn-custom">مدیریت سرفصل حساب کل</a>
+      <a href="/sub-accounts" class="btn btn-custom">مدیریت سرفصل معین</a>
+      <a href="/details" class="btn btn-custom">مدیریت سرفصل تفصیل</a>
+      <a href="/bank-accounts" class="btn btn-custom">مدیریت اطلاعات حساب بانکی</a>
+    </div>
+  </div>
+  <div class="row text-center mt-4">
+    <div class="col-md-4">
+      <div class="card p-4">
+        <div class="card-body">
+          <h5 class="card-title">مدیریت اشخاص</h5>
+          <a href="/persons/add" class="btn btn-custom">افزودن شخص</a>
+          <a href="/persons" class="btn btn-custom">مشاهده اشخاص</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <div class="card-body">
+          <h5 class="card-title">مدیریت دریافت‌ها</h5>
+          <a href="/receipts/add" class="btn btn-custom">افزودن دریافت نقدی</a>
+          <a href="/receipts" class="btn btn-custom">مشاهده دریافت‌ها</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <div class="card-body">
+          <h5 class="card-title">مدیریت پرداخت‌ها</h5>
+          <a href="/payments/add" class="btn btn-custom">افزودن پرداخت نقدی</a>
+          <a href="/payments" class="btn btn-custom">مشاهده پرداخت‌ها</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center mt-4">
+    <div class="col-md-4">
+      <div class="card p-4">
+        <div class="card-body">
+          <h5 class="card-title">مدیریت چک‌ها</h5>
+          <a href="/checks/add" class="btn btn-custom">افزودن چک</a>
+          <a href="/checks" class="btn btn-custom">مشاهده چک‌ها</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <div class="card-body">
+          <h5 class="card-title">مدیریت سفارشات</h5>
+          <a href="/orders" class="btn btn-custom">برو به سفارشات</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center mt-4">
+    <div class="col-md-4">
+      <div class="card p-4">
+        <div class="card-body">
+          <h5 class="card-title">مدیریت کالا</h5>
+          <a href="/products/add" class="btn btn-custom">افزودن کالا</a>
+          <a href="/products" class="btn btn-custom">مشاهده کالاها</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

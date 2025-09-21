@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت سرفصل حساب کل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center">مدیریت سرفصل حساب کل</h2>
+    <form th:action="@{/account-heading-form}" th:object="${accountHeading}" method="post">
+        <div class="form-group">
+            <label for="date">تاریخ</label>
+            <input type="date" class="form-control" id="date" th:field="*{date}" required>
+        </div>
+        <div class="form-group">
+            <label for="headingCode">کد سرفصل</label>
+            <input type="text" class="form-control" id="headingCode" th:field="*{headingCode}" required>
+        </div>
+        <div class="form-group">
+            <label for="headingName">نام سرفصل</label>
+            <input type="text" class="form-control" id="headingName" th:field="*{headingName}" required>
+        </div>
+        <div class="form-group">
+            <label for="accountNature">ماهیت حساب</label>
+            <select class="form-control" id="accountNature" name="accountNature.id" required>
+                <option value="">انتخاب کنید</option>
+                <option value="1">بدهکار</option>
+                <option value="2">بستانکار</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fiscalYear">سال مالی</label>
+            <select class="form-control" id="fiscalYear" th:field="*{fiscalYear}" required>
+                <option value="">انتخاب کنید</option>
+                <option value="1400">1403</option>
+                <option value="1401">1404</option>
+                <option value="1402">1405</option>
+                <option value="1403">1406</option>
+                <option value="1404">1407</option>
+                <option value="1405">1408</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">ذخیره</button>
+    </form>
+</div>
+</body>
+</html>
